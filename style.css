@@ -1,5 +1,6 @@
 :root {
   font-size: 62.5%;
+  font-family: "Times New Roman", Times, serif;
 }
 
 * {
@@ -37,15 +38,80 @@ section {
 .main-header .logo-wrapper .logo {
   width: 100%;
   height: 96%;
-  background-image: url("./images/bluelogowhiteback.png");
+  background-image: "";
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.main-header .main-nav {
+  position: relative;
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 40%;
+}
+.main-header .main-nav .nav-list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-header .main-nav .nav-list .nav-item {
+  display: inline-block;
+  width: auto;
+  height: 4rem;
+  margin: 0 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F9F7F7;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.main-header .main-nav .nav-list #fiverBtn {
+  background-color: #0ac5b8;
+  color: #F9F7F7;
+  font-size: 1.5rem;
+  width: 15rem;
 }
 
 .hero {
   height: 80vh;
   background-color: #112D4E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .heading-wrapper {
+  height: 15vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero .heading-wrapper .title {
+  color: #DBE2EF;
+  font-size: 7rem;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  font-weight: 800;
+}
+.hero .heading-wrapper .slogan {
+  color: #0ac5b8;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  font-weight: 800;
 }
 
 .technology {
@@ -76,5 +142,5 @@ section {
 .main-footer {
   width: 100%;
   height: 30vh;
-  background-color: #F9F7F7;
+  background-color: #1a1a1a;
 }/*# sourceMappingURL=style.css.map */
