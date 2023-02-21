@@ -29,7 +29,8 @@ section {
 
 .main-header {
     width: 100%;
-    height: 20rem;
+    height: 8rem;
+    position: relative;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -37,12 +38,14 @@ section {
 
     .logo-wrapper {
         width: 18rem;
-        height: 18rem;
+        height: 6rem;
         position: absolute;
-        margin-left: 8rem;
+        left: 0;
+        margin-left: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 1px solid white;
         
         .logo {
             width: 100%;
@@ -58,46 +61,109 @@ section {
         position: relative;
         position: absolute;
         display: flex;
+        align-items: center;
         right: 0;
-        top: 0;
         width: 35%;
-        height: 40%;
+        height: 7rem;
 
-        .nav-list {
-            width: 100%;
-            height: 100%;
+        .hamburger-wrapper {
+            z-index: 2;
             position: relative;
-            padding: 0rem;
+            position: absolute;
+            width: 20px;
+            height: 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            right: 4rem;
 
-            .nav-item {
-                display: inline-block;
-                width: auto;
-                height: 4rem;
-                margin: 0 1.5rem;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: $white;
-                font-size: 1.2rem;
-                white-space: nowrap;
+            .hamburger-top,
+            .hamburger-mid,
+            .hamburger-btm {
+                width: 100%;
+                height: .2rem;
+                position: absolute;
+                background-color: $white;
+                border-radius: 20px;
+                transition: all linear .4s;
             }
 
-            #fiverBtn {
-                background-color: $green;
-                color: $white;
-                font-size: 1.5rem;
-                width: 15rem;
+            .hamburger-top {
+                top: 2px;
+            }
+
+            .hamburger-btm {
+                bottom: 2px;
             }
         }
+
+        .hamburger-wrapper.open {
+            .hamburger-mid {
+                background-color: #000;
+                opacity: 0;
+                translate: 100% 0;
+            }
+
+            .hamburger-top {
+                background-color: #000;
+                translate: 0 7px;
+                rotate: 45deg;
+            }
+
+            .hamburger-btm {
+                background-color: #000;
+                translate: 0 -7px;
+                rotate: -45deg;
+            }
+        }
+        
+        .nav-list {
+            width: 0;
+            height: 25rem;
+            position: relative;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 0;
+            padding: 0rem;
+            padding-top: 4rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            transition: all .4s ease-in-out;
+            background-color: $white;
+            border-bottom-left-radius: 20px;
+            overflow: hidden;
+
+            .nav-item {
+                width: 85%;
+                position: relative;
+                height: 2.5rem;
+                display: flex;
+                align-items: center;
+                float: right;
+                margin-top: auto;
+                margin-bottom: auto;
+                color: $darkBlue;
+                font-size: 1.5rem;
+                white-space: nowrap;
+                font-weight: $fontWeightMedium;
+            }
+            
+            #fiverBtn {
+                color: green;
+                font-size: 1.5rem;
+                font-weight: $fontWeightStrong;
+            }
+        }
+    }
+
+    .nav-list.open {
+        width: 120%;
     }
 }
 
 .hero {
-    height: 80vh;
+    height: 90vh;
     background-color: $darkBlue;
     display: flex;
     align-items: center;
@@ -115,7 +181,7 @@ section {
 
         .title {
             color: $clear;
-            font-size: 7rem;
+            font-size: 4rem;
             white-space: nowrap;
             position: absolute;
             top: 0;
@@ -124,7 +190,7 @@ section {
 
         .slogan {
             color: $green;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             white-space: nowrap;
             position: absolute;
             bottom: 0;
