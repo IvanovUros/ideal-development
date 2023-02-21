@@ -25,6 +25,36 @@ body {
 section {
     padding: 4rem;
     width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text-wrapper {
+        position: absolute;
+        width: 80%;
+        height: auto;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+            font-size: 2.5rem;
+            color: $blue;
+            font-weight: $fontWeightStrong;
+            margin-bottom: .5rem;
+        }
+
+        .text {
+            font-size: 1.5rem;
+            font-weight: $fontWeightMedium;
+        }
+    }
 }
 
 .main-header {
@@ -199,9 +229,61 @@ section {
     }
 }
 
-.technology {
+.about-us {
     height: 80vh;
+    background-color: $clear;
+}
+
+.technology {
+    height: auto;
+    min-height: 80vh;
     background-color: $white;
+
+    .technologies-list {
+        width: 80%;
+        min-height: 40rem;
+        position: relative;
+        height: auto;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .tech-wrapper {
+            width: 90%;
+            border: 1px solid black;
+            height: 35rem;
+            margin-top: 5rem;
+            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 .5rem;
+            border-radius: 20px;
+
+            .logo-wrapper {
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+                border: 1px solid black;
+                margin-top: 2.5rem;
+            }
+
+            .tech-name {
+                white-space: nowrap;
+                margin-top: .5rem;
+                font-size: 2rem;
+                color: $darkBlue;
+            }
+
+            .tech-desc {
+                text-align: center;
+                margin-top: 2rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
 }
 
 .customers {

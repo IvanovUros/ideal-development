@@ -16,6 +16,33 @@ body {
 section {
   padding: 4rem;
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .text-wrapper {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+section .text-wrapper .heading {
+  font-size: 2.5rem;
+  color: #3F72AF;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+section .text-wrapper .text {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .main-header {
@@ -170,9 +197,55 @@ section {
   font-weight: 800;
 }
 
-.technology {
+.about-us {
   height: 80vh;
+  background-color: #DBE2EF;
+}
+
+.technology {
+  height: auto;
+  min-height: 80vh;
   background-color: #F9F7F7;
+}
+.technology .technologies-list {
+  width: 80%;
+  min-height: 40rem;
+  position: relative;
+  height: auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.technology .technologies-list .tech-wrapper {
+  width: 90%;
+  border: 1px solid black;
+  height: 35rem;
+  margin-top: 5rem;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 20px;
+}
+.technology .technologies-list .tech-wrapper .logo-wrapper {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-top: 2.5rem;
+}
+.technology .technologies-list .tech-wrapper .tech-name {
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #112D4E;
+}
+.technology .technologies-list .tech-wrapper .tech-desc {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.3rem;
 }
 
 .customers {
