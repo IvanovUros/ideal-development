@@ -25,6 +25,7 @@ body {
 section {
     padding: 4rem;
     width: 100%;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -53,6 +54,7 @@ section {
         .text {
             font-size: 1.5rem;
             font-weight: $fontWeightMedium;
+            text-align: center;
         }
     }
 }
@@ -230,7 +232,7 @@ section {
 }
 
 .about-us {
-    height: 80vh;
+    min-height: 80vh;
     background-color: $clear;
 }
 
@@ -251,8 +253,8 @@ section {
         
         .tech-wrapper {
             width: 90%;
-            border: 1px solid black;
             height: 35rem;
+            box-shadow: $darkBlue .4rem .3rem 1.5rem ;
             margin-top: 5rem;
             display: inline-block;
             display: flex;
@@ -265,8 +267,9 @@ section {
                 width: 15rem;
                 height: 15rem;
                 border-radius: 50%;
-                border: 1px solid black;
+                box-shadow: $darkBlue .2rem .2rem .5rem ;
                 margin-top: 2.5rem;
+                overflow: hidden;
             }
 
             .tech-name {
@@ -286,23 +289,81 @@ section {
 
 }
 
-.customers {
-    height: 90vh;
+.guarantees {
+    min-height: 90vh;
     background-color: $clear;
+
+    .benefits-list {
+        margin-top: 10rem;
+        width: 100%;
+        height: auto;
+        list-style: none;
+        position: relative;
+
+        .border-middle {
+            width: 2px;
+            height: 100%;
+            background-color: gray;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 10px;
+            opacity: .3;
+        }
+
+        .border-horizontal-top,
+        .border-horizontal-btm {
+            width: 100%;
+            height: 2px;
+            border-radius: 10px;
+            opacity: .3;
+            background-color: gray;
+            position: absolute;
+        }
+
+        .border-horizontal-top {
+            top: 20rem;
+        }
+
+        .border-horizontal-btm {
+            bottom: 20rem;
+        }
+
+        .benefit-item {
+            width: 50%;
+            height: 20rem;
+            float: left;
+            position: relative;
+
+            .icon-wrapper--left,
+            .icon-wrapper--right {
+                width: 70px;
+                height: 70px;
+                border: 1px solid black;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+    }
 }
 
 .reviews {
-    height: 95vh;
+    min-height: 95vh;
     background-color: $blue;
 }
 
 .world-map {
-    height: 70vh;
+    min-height: 70vh;
     background-color: $clear;
 }
 
 .contact-us {
-    height: 70vh;
+    min-height: 70vh;
     background-color: $darkBlue;
 }
 

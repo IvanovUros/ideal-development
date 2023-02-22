@@ -16,6 +16,7 @@ body {
 section {
   padding: 4rem;
   width: 100%;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,6 +44,7 @@ section .text-wrapper .heading {
 section .text-wrapper .text {
   font-size: 1.5rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .main-header {
@@ -198,7 +200,7 @@ section .text-wrapper .text {
 }
 
 .about-us {
-  height: 80vh;
+  min-height: 80vh;
   background-color: #DBE2EF;
 }
 
@@ -219,8 +221,8 @@ section .text-wrapper .text {
 }
 .technology .technologies-list .tech-wrapper {
   width: 90%;
-  border: 1px solid black;
   height: 35rem;
+  box-shadow: #112D4E 0.4rem 0.3rem 1.5rem;
   margin-top: 5rem;
   display: inline-block;
   display: flex;
@@ -233,8 +235,9 @@ section .text-wrapper .text {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  border: 1px solid black;
+  box-shadow: #112D4E 0.2rem 0.2rem 0.5rem;
   margin-top: 2.5rem;
+  overflow: hidden;
 }
 .technology .technologies-list .tech-wrapper .tech-name {
   white-space: nowrap;
@@ -248,23 +251,74 @@ section .text-wrapper .text {
   font-size: 1.3rem;
 }
 
-.customers {
-  height: 90vh;
+.guarantees {
+  min-height: 90vh;
   background-color: #DBE2EF;
+}
+.guarantees .benefits-list {
+  margin-top: 10rem;
+  width: 100%;
+  height: auto;
+  list-style: none;
+  position: relative;
+}
+.guarantees .benefits-list .border-middle {
+  width: 2px;
+  height: 100%;
+  background-color: gray;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 10px;
+  opacity: 0.3;
+}
+.guarantees .benefits-list .border-horizontal-top,
+.guarantees .benefits-list .border-horizontal-btm {
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  opacity: 0.3;
+  background-color: gray;
+  position: absolute;
+}
+.guarantees .benefits-list .border-horizontal-top {
+  top: 20rem;
+}
+.guarantees .benefits-list .border-horizontal-btm {
+  bottom: 20rem;
+}
+.guarantees .benefits-list .benefit-item {
+  width: 50%;
+  height: 20rem;
+  float: left;
+  position: relative;
+}
+.guarantees .benefits-list .benefit-item .icon-wrapper--left,
+.guarantees .benefits-list .benefit-item .icon-wrapper--right {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .reviews {
-  height: 95vh;
+  min-height: 95vh;
   background-color: #3F72AF;
 }
 
 .world-map {
-  height: 70vh;
+  min-height: 70vh;
   background-color: #DBE2EF;
 }
 
 .contact-us {
-  height: 70vh;
+  min-height: 70vh;
   background-color: #112D4E;
 }
 
